@@ -6,6 +6,39 @@ body
     'Hiragino Kaku Gothic Pro', sans-serif
 }
 
+/* サイト名 */
+.site h1 a
+{
+    color: #000000;
+    text-decoration: none;
+}
+
+.site h1
+{
+    margin: 0;
+    font-size: 30px;
+}
+
+.site p
+{
+    margin: 0;
+    font-size: 12px;
+}
+
+/* 記事 */
+.article h1
+{
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+.article p
+{
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
 /* menuの横並び */
 .menu ul
 {
@@ -39,4 +72,12 @@ body
 {
     float: left;
     width: auto;
+}
+
+/* コピーライト */
+.copyright p
+{
+    margin: 0;
+    color: #666666;
+    font-size: 14px;
 }
