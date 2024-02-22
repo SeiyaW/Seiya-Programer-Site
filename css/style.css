@@ -217,35 +217,33 @@ body
     padding-bottom: 15px;
 }
 
-@media (min-width: 768px){
 
-    /* BOX3とBOX4を横に並べる */
-    .boxA:after
-    {
-        content: "";
-        display: block;
-        clear: both;
-    }
-
-    .box3
-    {
-        float: left;
-        width: 70%;
-    }
-
-    .box4
-    {
-        float: right;
-        width: 30%;
-    }
-
-    /* BOX3とBOX4の左右の間隔 */
-    .box3
-    {
-        padding-right: 50px;
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-    }
-
+/* BOX3とBOX4を横に並べる */
+.boxA:after
+{
+    content: "";
+    display: block;
+    clear: both;
 }
+
+.box3
+{
+    float: left;
+    width: 70%;
+}
+
+.box4
+{
+    float: right;
+    width: 30%;
+}
+
+/* BOX3とBOX4の左右の間隔 */
+.box3
+{
+    padding-right: 50px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
