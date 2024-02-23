@@ -7,6 +7,33 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="box1">
+        <div class="site">
+            <h1><a href="../index.html">Seiya-Programer-Site</a></h1>
+        </div>
+    </div>
+    
+    <div class="box2">
+        <nav class="menu">
+            <ul>
+                <li><a href="../index.html">トップ</a></li>
+                <li><a href="#">JavaScript</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <h1>やることリスト</h1>
+    <ul id="list">
+    </ul>
+   <footer>JavaScript Sample</footer>
    
+   <script>
+    var todo = ['JavaScript開発', 'データ整理', 'Python基礎学習', 'GitHub Pages更新'];
+    for(var i = 0; i < todo.length; i++){
+        var li = document.createElement('li');
+        li.textContent = todo[i];
+        document.getElementById('list').appendChild(li);
+    }
+   </script>
 </body>
 </html>
