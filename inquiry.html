@@ -3,14 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/inquiry-style.css">
     <title>お問い合わせフォーム</title>
 </head>
 <body>
-    <form action="https://ssgform.com/s/KzBpDMtFzy74" method="post">
-        <input type="text" name="お名前" required="required" />
-        <input type="email" name="メールアドレス" required="required" />
-        <textarea name="お問い合わせ内容" required="required"></textarea>
-        <button type="submit">送信する</button>
-    </form>
+    <header>
+
+    </header>
+
+    <div class="wrap">
+        <div class="content">
+            <div class="main-center">
+                <h1>Contact</h1>
+                <p>お気軽にお問い合わせください。</p>
+
+                <section class="access clearfix">
+                    <h2 class="icon">Access</h2>
+                    <table>
+                        <tr>
+                            <th>所在地住所</th>
+                            <td>〒123-4567<br>大阪府大阪市港区三先〇-△-◆</td>
+                        </tr>
+                        <tr>
+                            <th>電話番号</th>
+                            <td>0120-12-3456</td>
+                        </tr>
+                        <tr>
+                            <th>電車でのアクセス</th>
+                            <td>朝潮橋駅より徒歩10分</td>
+                        </tr>
+                    </table>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.868273678362!2d135.45183757407543!3d34.658029485504066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e7ccd2982423%3A0x897b85ee3adb3c63!2z44Oq44OQ44O844Ks44O844OH44Oz44G_44Gq44Go6YCa44KK!5e0!3m2!1sja!2sjp!4v1709098537031!5m2!1sja!2sjp" width="460" height="220" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </section>
+
+                <section>
+                    <h2 class="icon">Contact form</h2>
+                    <div class="form">
+                        <form action="https://ssgform.com/s/KzBpDMtFzy74" method="post">
+                            <dl>
+                                <dt><span class="required">お名前</span></dt>
+                                <dd><input type="text" name="name" class="name" required></dd>
+                                <dt><span class="required">メールアドレス</span></dt>
+                                <dd><input type="email" name="email" class="email" required></dd>
+                                <dt>お電話番号</dt>
+                                <dd><input type="tel" name="tel" class="tel"></dd>
+                                <dt>お問い合わせ種別</dt>
+                                <dd>
+                                    <select name="type" class="type">
+                                        <option value="〇〇のご依頼">〇〇のご依頼</option>
+                                        <option value="△△のご依頼">△△のご依頼</option>
+                                        <option value="その他お問い合わせ">その他お問い合わせ</option>
+                                    </select>
+                                </dd>
+                                <dt>ご希望のご連絡方法</dt>
+                                <dd>
+                                    <input type="radio" name="contact" value="Eメール">Eメール
+                                    <input type="radio" name="contact" value="お電話">お電話
+                                </dd>
+                                <dt>メッセージ</dt>
+                                <dd><textarea name="message" class="message"></textarea></dd>
+                            </dl>
+                            <button type="submit" class="btn">送信</button>
+                        </form>
+
+                        <div class="attention">
+                            <p>※学習用で作成した「お問い合わせフォーム」になります。<br>メール送信されてもご対応はできませんのでご注意ください。</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
