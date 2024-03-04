@@ -6,6 +6,11 @@ body{
     color: #333333;
     font-size: 15px;
     line-height: 2;
+    background-image: url(../img/sample02.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 p,h1,h2,h3,h4,h5{
@@ -38,6 +43,7 @@ header{
 }
 
 .logo{
+    color: white;
     float: left;
     margin-top: 50px;
 }
