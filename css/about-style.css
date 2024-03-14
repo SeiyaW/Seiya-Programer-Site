@@ -7,12 +7,12 @@ body{
     color: #333333;
     font-size: 15px;
     line-height: 2;
-    background-image: url(../img/sample03.jpg);
+     background-image: url(../img/sample03.jpg);
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center top;
     background-attachment: fixed;
-    background-size: 100% auto;
-}
+    background-size: 100% auto; 
+} 
 
 p,h1,h2,h3,h4,h5{
     margin-top: 0;
@@ -38,9 +38,8 @@ a:visited{
 }
 
 header{
-    width: 960px;
     height: 100px;
-    margin: 0 auto;
+    margin: 0 20px;
 }
 
 .logo{
@@ -72,7 +71,7 @@ header{
 }
 
 .content{
-    width: 960px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -80,11 +79,11 @@ header{
     clear: both;
     background-color: #ffffff;
     margin-top: 220px;
-    padding: 35px 0;
+    padding: 35px 20px;
 }
 
 .main-center{
-    width: 940px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -106,7 +105,7 @@ h2{
 }
 
 .profile-txt{
-    width: 540px;
+    width: 60%;
     float: left;
 }
 
@@ -115,6 +114,8 @@ h2{
 }
 
 .profile-image{
+    width: 40%;
+    text-align: center;
     float: right;
 }
 
@@ -129,7 +130,7 @@ section{
 }
 
 .career th{
-    width: 240px;
+    width: 30%;
     background-color: #f0f0f0;
     padding: 12px 0;
     border: 1px solid #cccccc;
