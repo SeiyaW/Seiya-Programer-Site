@@ -1,0 +1,41 @@
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\Persistence\ManagerRegistry;
+
+class UserRepository extends ServiceEntityRepository
+{
+    public function __construct(ManagerRegistry $registry)
+    {
+        parent::__construct($registry, User::class);
+    }
+
+    public function getUsersQueryBuilderForBothTimeRanges()
+    {
+        $qb = $this->createQueryBuilder('u');
+
+        // 12時間未満のデータの条件
+        $lessThan12Hours = $this->createQueryBuilder('u_less')
+            ->select('u_less.id')
+            ->where('u_less.registrationDate >= :less_than_12_hours')
+            ->setParameter('less_than_12_hours', new \DateTime('-12 hours'))
+            ->getQuery()
+            ->getDQL();
+
+        // 12時間以上のデータの条件
+        $moreThan12Hours = $this->createQueryBuilder('u_more')
+            ->select('u_more.id')
+            ->where('u_more.registrationDate < :less_than_12_hours')
+            ->setParameter('less_than_12_hours', new \DateTime('-12 hours'))
+            ->getQuery()
+            ->getDQL();
+
+        // 12時間未満または12時間以上のデータを取得する条件を結合
+        $qb->andWhere(
+            $qb->expr()->orX(
+                $qb->expr()->in('u.id', $lessThan12Hours),
+                $qb->expr()->in('u.id', $moreThan12Hours)
+            )
+        );
+
+        return $qb;
+    }
+}
